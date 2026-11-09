@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danielle Langella | IT Operations Portfolio</title>
+    <style>
+        :root {
+            --primary: #2e1065;      /* Rich, elegant deep violet */
+            --accent: #7c3aed;       /* Vibrant soft violet for details */
+            --text: #334155;         /* Soft graphite text for high readability */
+            --background: #fffbeb;   /* Warm, cozy cream background */
+            --card-bg: #ffffff;      /* Pure white for the paper content */
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Times New Roman', Times, 'Georgia', serif; 
+            color: var(--text);
+            line-height: 1.6;
+            background-color: var(--background);
+            padding: 3rem 1.5rem;
+            position: relative;
+        }
+
+        /* --- DETAILED CUSTOM CORNER SWIRLS --- */
+        .corner-flourish {
+            position: fixed;
+            width: 100px;
+            height: 100px;
+            color: var(--accent);
+            opacity: 0.25; 
+            font-size: 2.5rem;
+            pointer-events: none;
+            z-index: 1000;
+            font-family: serif;
+        }
+        .top-left { top: 25px; left: 25px; transform: scaleX(-1); }
+        .top-right { top: 25px; right: 25px; }
+        .bottom-left { bottom: 25px; left: 25px; transform: scale(-1); }
+        .bottom-right { bottom: 25px; right: 25px; transform: scaleY(-1); }
+
+        .container {
+            max-width: 820px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 3.5rem;
+            border-radius: 4px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.01);
+            border: 1px solid #f1f5f9;
+        }
+
+        header {
+            text-align: center;
+            border-bottom: 1px dashed #cbd5e1;
+            padding-bottom: 2rem;
+            margin-bottom: 2.5rem;
+        }
+
+        h1 {
+            color: var(--primary);
+            font-size: 3rem;
+            font-weight: 400;
+            font-style: italic; 
+        }
+
+        .subtitle {
+            font-family: 'Segoe UI', Roboto, sans-serif;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.85rem;
+            margin-top: 0.5rem;
+            font-weight: 600;
+        }
+
+        h2 {
+            font-family: 'Segoe UI', Roboto, sans-serif;
+            color: var(--primary);
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        h2::before, h2::after {
+            content: "";
+            flex: 1;
+            height: 1px;
+            background: linear-gradient(to right, transparent, #cbd5e1, transparent);
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .project-block, .job-block {
+            background: #fdfdfd;
+            border: 1px dashed #e2e8f0;
+            padding: 2rem;
+            border-radius: 4px;
+            margin-bottom: 2.5rem;
+        }
+
+        .project-block h3, .job-block h3 {
+            font-family: 'Segoe UI', sans-serif;
+            font-size: 1.15rem;
+            color: var(--accent);
+            margin-bottom: 0.25rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .job-meta {
+            font-family: 'Segoe UI', sans-serif;
+            font-size: 0.9rem;
+            color: #64748b;
+            margin-bottom: 1rem;
+            font-style: italic;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        li {
+            margin-bottom: 0.8rem;
+            position: relative;
+            padding-left: 1.75rem;
+            font-size: 1.1rem;
+        }
+
+        li::before {
+            content: "✦";
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-size: 0.9rem;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .skills-column h4 {
+            font-family: 'Segoe UI', sans-serif;
+            color: var(--primary);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            margin-bottom: 0.75rem;
+            letter-spacing: 1px;
+            border-bottom: 1px solid #f1f5f9;
+            padding-bottom: 0.25rem;
+        }
+
+        .cert-item {
+            margin-bottom: 1.25rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .cert-item::before {
+            content: "❀";
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-size: 1rem;
+        }
+
+        .cert-title {
+            font-size: 1.15rem;
+            font-weight: bold;
+            color: var(--primary);
+        }
+
+        .cert-meta {
+            font-family: 'Segoe UI', sans-serif;
+            font-size: 0.85rem;
+            color: #64748b;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Custom Floral Swirl Corners -->
+<div class="corner-flourish top-left">✽</div>
+<div class="corner-flourish top-right">✽</div>
+<div class="corner-flourish bottom-left">✽</div>
+<div class="corner-flourish bottom-right">✽</div>
+
+<div class="container">
+    <header>
+        <h1>Danielle Langella</h1>
+        <div class="subtitle">IT Operations & Tech Support</div>
+        <div class="counter-badge">
+
+        ❀ Serverless Cloud Project Visitor Count: <span id="visitorcount">001</span> ❀
+        </div>
+    </header>
+
+<script>
+  fetch('https://ifyrotv5yd.execute-api.eu-north-1.amazonaws.com/count')
+    .then(response => response.json())
+    .then(data => {
+      document.getElementById('visitorcount').innerText = data.views;
+    });
+</script>
+
+    <section>
+        <h2>Professional Summary</h2>
+        <p>IT Operations professional specializing in incident triage, ticketing system administration, and technical support. Active learner applying foundational cloud deployment mechanics alongside deep troubleshooting skills to manage stable corporate technology application fields.</p>
+    </section>
+
+    <!-- CERTIFICATIONS SECTION -->
+    <section>
+        <h2>Certifications</h2>
+        <div class="cert-item">
+            <div class="cert-title">AWS Certified Cloud Practitioner</div>
+            <div class="cert-meta">Amazon Web Services | 2026</div>
+        </div>
+        <div class="cert-item">
+            <div class="cert-title">Google Professional IT Support Certificate</div>
+            <div class="cert-meta">Google | 2025</div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Professional Experience</h2>
+        
+        <!-- VEEPEE -->
+        <div class="job-block">
+            <h3>Technical Support / Incident Management</h3>
+            <div class="job-meta">Veepee – Barcelona | October 2025 – Present</div>
+            <ul>
+                <li><strong>Incident Management:</strong> Manage active incidents and service requests through structured lifecycle processes to minimize operational downtime.</li>
+                <li><strong>Ticketing Systems:</strong> Log, track, and resolve system issues using Jira and osTicket platforms while maintaining precise technical documentation.</li>
+                <li><strong>Queue & SLA Governance:</strong> Monitor active ticket queues, prioritize incoming incidents based on severity, and ensure strict adherence to established SLAs.</li>
+                <li><strong>On-Call Operations:</strong> Participate in scheduled on-call rotations, providing time-critical system support and executing rapid engineering escalations when required.</li>
+                <li><strong>Cross-Team Collaboration:</strong> Collaborate directly with internal engineering and technical teams to investigate, triage, and resolve recurring or complex system anomalies.</li>
+            </ul>
+        </div>
+
+        <!-- RAYTHEON -->
+        <div class="job-block" style="margin-top: 1.5rem;">
+            <h3>L1 Technical Support / LMS Administrator</h3>
+            <div class="job-meta">Raytheon Professional Services – Barcelona | February 2020 – October 2021</div>
+            <ul>
+                <li><strong>Application Administration:</strong> Operated as a system administrator for the core Learning Management System (LMS) application, structuring enterprise courses and curating curriculums for institutional banking employees (Allied Irish Bank).</li>
+                <li><strong>Technical Troubleshooting:</strong> Provided end-user help desk assistance resolving login anomalies, browser configuration issues, cache/cookie conflicts, and basic platform navigation.</li>
+                <li><strong>Incident Triage & Escalation:</strong> Monitored core application metrics for active service outages, meticulously logging system incidents and escalating Level 2 tier issues to internal platform engineering teams.</li>
+                <li><strong>Quality Assurance Testing:</strong> Executed iterative functional testing protocols across active deployment builds, systematically surfacing and reporting codebase bugs directly to the developer teams.</li>
+                <li><strong>Data & Metrics Reporting:</strong> Generated automated completion analytics, compliance reporting vectors, and operational documentation matrices for internal corporate audit reviews.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <h2>Current Upskilling Goals</h2>
+        <div class="project-block">
+            <h3>The Cloud Resume Challenge (Phase 1: Frontend Deployment)</h3>
+            <p>I am building this hands-on project to directly bridge my technical support background with modern cloud infrastructure engineering.</p>
+            <ul>
